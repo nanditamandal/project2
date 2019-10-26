@@ -46,12 +46,12 @@
             this.startDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.searchButton = new System.Windows.Forms.Button();
             this.groupBox = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.searchiconButton = new System.Windows.Forms.Button();
             this.nextButton = new System.Windows.Forms.Button();
             this.crossButton = new System.Windows.Forms.Button();
             this.homeButton = new System.Windows.Forms.Button();
             this.previousButton = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.nameTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -196,12 +196,12 @@
             // groupBox
             // 
             this.groupBox.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.groupBox.Controls.Add(this.button1);
+            this.groupBox.Controls.Add(this.searchiconButton);
             this.groupBox.Controls.Add(this.nextButton);
             this.groupBox.Controls.Add(this.crossButton);
             this.groupBox.Controls.Add(this.homeButton);
             this.groupBox.Controls.Add(this.previousButton);
-            this.groupBox.Controls.Add(this.textBox3);
+            this.groupBox.Controls.Add(this.nameTextBox);
             this.groupBox.Controls.Add(this.label1);
             this.groupBox.Location = new System.Drawing.Point(2, 12);
             this.groupBox.Name = "groupBox";
@@ -209,14 +209,15 @@
             this.groupBox.TabIndex = 36;
             this.groupBox.TabStop = false;
             // 
-            // button1
+            // searchiconButton
             // 
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(702, 33);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(45, 36);
-            this.button1.TabIndex = 10;
-            this.button1.UseVisualStyleBackColor = true;
+            this.searchiconButton.Image = ((System.Drawing.Image)(resources.GetObject("searchiconButton.Image")));
+            this.searchiconButton.Location = new System.Drawing.Point(702, 33);
+            this.searchiconButton.Name = "searchiconButton";
+            this.searchiconButton.Size = new System.Drawing.Size(45, 36);
+            this.searchiconButton.TabIndex = 10;
+            this.searchiconButton.UseVisualStyleBackColor = true;
+            this.searchiconButton.Click += new System.EventHandler(this.searchiconButton_Click);
             // 
             // nextButton
             // 
@@ -246,6 +247,7 @@
             this.homeButton.Size = new System.Drawing.Size(43, 35);
             this.homeButton.TabIndex = 7;
             this.homeButton.UseVisualStyleBackColor = true;
+            this.homeButton.Click += new System.EventHandler(this.homeButton_Click);
             // 
             // previousButton
             // 
@@ -256,12 +258,12 @@
             this.previousButton.TabIndex = 6;
             this.previousButton.UseVisualStyleBackColor = true;
             // 
-            // textBox3
+            // nameTextBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(347, 49);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(294, 20);
-            this.textBox3.TabIndex = 5;
+            this.nameTextBox.Location = new System.Drawing.Point(347, 49);
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.Size = new System.Drawing.Size(294, 20);
+            this.nameTextBox.TabIndex = 5;
             // 
             // label1
             // 
@@ -322,12 +324,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn date2DataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
         private System.Windows.Forms.GroupBox groupBox;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button searchiconButton;
         private System.Windows.Forms.Button nextButton;
         private System.Windows.Forms.Button crossButton;
         private System.Windows.Forms.Button homeButton;
         private System.Windows.Forms.Button previousButton;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox nameTextBox;
         private System.Windows.Forms.Label label1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.GroupBox groupBox1;

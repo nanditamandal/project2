@@ -91,6 +91,42 @@ namespace SmallBusinessManagementSystem.UI
 
             }
         }
+
+        private void homeButton_Click(object sender, EventArgs e)
+        {
+
+            HomeUI newForm = new HomeUI();
+            newForm.Show();
+            this.Hide();
+        }
+
+        private void namesearchButton_Click(object sender, EventArgs e)
+        {
+
+            SaleRepotingModel salerepotingModel = new SaleRepotingModel();
+
+            if (nameTextBox.Text ==" ")
+            {
+                MessageBox.Show("please insert name");
+                return;
+
+            }
+            
+            salerepotingModel.Name = nameTextBox.Text;
+           
+
+            bool ishas = !_salerepotingManager.SearchValueByName(salerepotingModel).Any();
+            if (ishas)
+            {
+                MessageBox.Show("no data");
+                return;
+            }
+            else
+            {
+                showdataGridView.DataSource = _salerepotingManager.SearchValueByName(salerepotingModel);
+            }
+
+        }
     }
     
 }

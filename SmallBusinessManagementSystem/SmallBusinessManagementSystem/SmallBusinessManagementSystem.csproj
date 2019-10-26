@@ -54,6 +54,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\PurchaseRepotingRepository.cs" />
     <Compile Include="Repository\SaleRepotingRepository.cs" />
+    <Compile Include="UI\HomeUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\HomeUI.Designer.cs">
+      <DependentUpon>HomeUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\PurchaseRepotingUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +81,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UI\HomeUI.resx">
+      <DependentUpon>HomeUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\PurchaseRepotingUI.resx">
       <DependentUpon>PurchaseRepotingUI.cs</DependentUpon>
     </EmbeddedResource>

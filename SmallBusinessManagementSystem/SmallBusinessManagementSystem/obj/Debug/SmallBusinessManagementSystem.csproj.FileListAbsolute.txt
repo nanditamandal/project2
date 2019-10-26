@@ -32,3 +32,4 @@ C:\Users\nandita\Desktop\Small-Business-Management-System-master\SmallBusinessMa
 C:\Users\nandita\Desktop\Small-Business-Management-System-master\SmallBusinessManagementSystem\SmallBusinessManagementSystem\obj\Debug\SmallBusinessManagementSystem.csproj.CoreCompileInputs.cache
 C:\Users\nandita\Desktop\Small-Business-Management-System-master\SmallBusinessManagementSystem\SmallBusinessManagementSystem\obj\Debug\SmallBusinessManagementSystem.exe
 C:\Users\nandita\Desktop\Small-Business-Management-System-master\SmallBusinessManagementSystem\SmallBusinessManagementSystem\obj\Debug\SmallBusinessManagementSystem.pdb
+C:\Users\nandita\Desktop\Small-Business-Management-System-master\SmallBusinessManagementSystem\SmallBusinessManagementSystem\obj\Debug\SmallBusinessManagementSystem.UI.HomeUI.resources

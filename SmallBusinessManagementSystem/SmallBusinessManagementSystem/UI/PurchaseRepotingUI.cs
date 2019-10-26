@@ -97,5 +97,39 @@ namespace SmallBusinessManagementSystem.UI
         {
             endDateTimePicker.CustomFormat = "yyyy / MM / dd";
         }
+
+        private void homeButton_Click(object sender, EventArgs e)
+        {
+
+            HomeUI newForm = new HomeUI();
+            newForm.Show();
+            this.Hide();
+        }
+
+        private void searchiconButton_Click(object sender, EventArgs e)
+        {
+            PurchaseRepotingModel purchaserepotingModel = new PurchaseRepotingModel();
+
+            if (nameTextBox.Text ==" ")
+            {
+                MessageBox.Show("please insert name");
+                return;
+
+            }
+            
+            purchaserepotingModel.Name = nameTextBox.Text;
+            
+
+            bool ishas = !_purchaserepotingManager.SearchValueByName(purchaserepotingModel).Any();
+            if (ishas)
+            {
+                MessageBox.Show("no data");
+                return;
+            }
+            else
+            {
+                showdataGridView.DataSource = _purchaserepotingManager.SearchValueByName(purchaserepotingModel);
+            }
+        }
     }
 }

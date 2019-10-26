@@ -18,7 +18,7 @@ namespace SmallBusinessManagementSystem
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new SaleRepotingUI());
-            Application.Run(new PurchaseRepotingUI());
+            Application.Run(new HomeUI());
         }
     }
 }

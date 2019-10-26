@@ -48,5 +48,42 @@ namespace SmallBusinessManagementSystem.Repository
 
 
         }
+        public List<SaleRepotingModel> SearchValueByName(SaleRepotingModel saleRepotingModel)
+        {
+            string connectionString = @"Server=DESKTOP-077IM0O;DataBase=Project1DB;Integrated Security=true";
+            SqlConnection sqlConnection = new SqlConnection(connectionString);
+
+            string CommandString = @"SELECT * FROM SalesRepoting WHERE Name='"+ saleRepotingModel.Name + "'";
+
+            SqlCommand sqlCommand = new SqlCommand(CommandString, sqlConnection);
+            sqlConnection.Open();
+
+            List<SaleRepotingModel> saleRepotingModels = new List<SaleRepotingModel>();
+
+            SqlDataReader sqlDataReader = sqlCommand.ExecuteReader();
+            while (sqlDataReader.Read())
+            {
+                SaleRepotingModel _saleRepotingModel = new SaleRepotingModel();
+
+                _saleRepotingModel.Product = Convert.ToString(sqlDataReader["Name"]);
+                _saleRepotingModel.Category = Convert.ToString(sqlDataReader["Category"]);
+
+                _saleRepotingModel.Quantity = Convert.ToDouble(sqlDataReader["Quantity"]);
+
+                _saleRepotingModel.UnitPrice = Convert.ToDouble(sqlDataReader["totalUnitPrice"]);
+                _saleRepotingModel.MRP = Convert.ToDouble(sqlDataReader["TotalMRP"]);
+                _saleRepotingModel.Profit = Convert.ToDouble(sqlDataReader["Profit"]);
+
+                saleRepotingModels.Add(_saleRepotingModel);
+            }
+
+            sqlConnection.Close();
+
+            return saleRepotingModels;
+
+
+
+
+        }
     }
 }

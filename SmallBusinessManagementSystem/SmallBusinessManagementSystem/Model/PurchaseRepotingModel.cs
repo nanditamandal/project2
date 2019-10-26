@@ -11,6 +11,8 @@ namespace SmallBusinessManagementSystem.Model
 
         public string Date { set; get; }
         public string Date2 { set; get; }
+        public string Name { set; get; }
+
         public string Code { get; set; }
         public string Product { get; set; }
         public string Category { get; set; }

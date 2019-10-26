@@ -17,5 +17,11 @@ namespace SmallBusinessManagementSystem.Manager
         {
             return _saleRepotingRepository.SearchValue(purchaseRepotingModel);
         }
+
+        
+        public List<PurchaseRepotingModel> SearchValueByName(PurchaseRepotingModel purchaseRepotingModel)
+        {
+            return _saleRepotingRepository.SearchValueByName(purchaseRepotingModel);
+        }
     }
 }
